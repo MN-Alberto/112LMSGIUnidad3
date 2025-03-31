@@ -34,16 +34,14 @@
         var container=document.querySelector('.container');
         var strong=document.querySelector('strong');
         var mark=document.querySelector('mark');
-        var hidden=document.querySelectorAll('p[hidden]');
+        var hidden=document.querySelectorAll('p[hidden]')[0];
         var details=document.querySelector('details');
 
-        container.style.fontStyle='italic';
-        container.appendChild.innerHTML='<p>Nuevo párrafo</p>';
-        strong.textContent='Texto de strong cambiado';
+        container.firstChild.textContent='Adios a todos, Soy Manz';
+        container.lastElementChild.innerHTML+='<p>Nuevo párrafo</p>';
+        strong.textContent='Manzano';
         mark.style.display='block';
-        hidden.forEach(function(element){
-            element.removeAttribute('hidden');
-        });
+        hidden.removeAttribute('hidden');
         details.open=true;
     </script>
 </body>
